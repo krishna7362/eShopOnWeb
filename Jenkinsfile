@@ -18,7 +18,7 @@ pipeline {
     }
     stage('sonarqube') {
       steps {
-        bat 'dotnet sonar:sonar'
+        bat 'mvn sonar:sonar'
       }
     }
   }
