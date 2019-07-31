@@ -18,7 +18,7 @@ pipeline {
     }
     stage('sonarqube') {
       steps {
-        bat 'sonar-properties'
+        withSonarQubeEnv 'sonar-properties'
       }
     }
   }
