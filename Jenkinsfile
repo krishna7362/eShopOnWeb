@@ -16,5 +16,10 @@ pipeline {
         bat 'dotnet test eShopOnWeb.sln'
       }
     }
+    stage('sonarqube') {
+      steps {
+        bat 'dotnet sonar:sonar'
+      }
+    }
   }
 }
