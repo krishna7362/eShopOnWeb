@@ -18,8 +18,8 @@ jobs:
       run: dotnet build --configuration Release
     - name: unit test
       run: dotnet test
-    - name: SonarCloud Scan
-      run: dotnet-sonarscanner
+    - name: SonarScan
+      run: dotnet tool install --global dotnet-sonarscanner --version 4.8.0
     
       
      
