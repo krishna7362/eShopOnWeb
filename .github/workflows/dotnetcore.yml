@@ -19,8 +19,7 @@ jobs:
     - name: unit test
       run: dotnet test
     - name: SonarCloud Scan
-       uses:sonarsource/sonarcloud-github-action@master
-      
+      run: dotnet-sonarscanner
     
       
      
