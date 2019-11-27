@@ -18,4 +18,9 @@ jobs:
       run: dotnet build --configuration Release
     - name: unit test
       run: dotnet test
+    - name: sonar
+       uses:Warchant/setup-sonar-scanner@v1
+      
+    
+      
      
