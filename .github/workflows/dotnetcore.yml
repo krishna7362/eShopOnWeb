@@ -18,8 +18,20 @@ jobs:
       run: dotnet build --configuration Release
     - name: unit test
       run: dotnet test
-    - name: SonarScan
-      run: dotnet tool install --global dotnet-sonarscanner --version 4.8.0
+   # - name: SonarScan
+    #  run: dotnet tool install --global dotnet-sonarscanner --version 4.8.0
+    - name: Sonarscanner for dotnet
+      uses: Secbyte/dotnet-sonarscanner@v1.2
+      with:
+        buildCommand: dotnet build .
+        testCommand: dotnet test .
+        projectKey: a-project-key
+        projectName: a-project-name
+        sonarOrganisation: an-org
+        beginArguments: /d:sonar.verbose="true" /d:sonar.cs.opencover.reportsPaths="/path/to/coverage.xml" /d:sonar.coverage.exclusions="**/*.cs"
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
       
      
