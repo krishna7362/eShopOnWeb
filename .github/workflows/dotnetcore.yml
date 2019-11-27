@@ -19,7 +19,7 @@ jobs:
     - name: unit test
       run: dotnet test
     - name: sonar
-       uses:Warchant/setup-sonar-scanner@v1
+       uses:Secbyte/dotnet-sonarscanner@2.0
       
     
       
