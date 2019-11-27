@@ -18,8 +18,8 @@ jobs:
       run: dotnet build --configuration Release
     - name: unit test
       run: dotnet test
-    - name: sonar
-       uses:Secbyte/dotnet-sonarscanner@2.0
+    - name: SonarCloud Scan
+       uses:sonarsource/sonarcloud-github-action@master
       
     
       
