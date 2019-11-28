@@ -28,7 +28,7 @@ jobs:
         projectKey: krishna7362_eShopOnWeb 
         projectName: Kona
         sonarOrganisation: krishna7362
-        beginArguments: /d:sonar.verbose="true" /d:sonar.cs.opencover.reportsPaths="/path/to/coverage.xml" /d:sonar.coverage.exclusions="**/*.cs"
+        beginArguments: /d:sonar.verbose="true" /d:sonar.coverage.exclusions="**/*.cs"
       env:
         SONAR_TOKEN: ${{ secrets.githubaction }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
